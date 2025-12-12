@@ -21,14 +21,18 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
+  flex-direction: column;      /* STACK ITEMS TOP -> BOTTOM */
+  align-items: center;     /* ALIGN LEFT */
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav h2 {
+  margin-bottom: 11px;          /* SPACE BETWEEN NAME & MENU */
 }
 
 nav ul {
@@ -39,7 +43,7 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 800;
   transition: 0.3s;
 }
 
