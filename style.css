@@ -1,0 +1,157 @@
+/* Updated styling while keeping original structure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #00eaff;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 12px 35px;
+  background: #00eaff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.skills-box span {
+  padding: 10px 25px;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #00eaff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.skills-box span:hover {
+  background: #00eaff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+  nav {
+    padding: 15px 20px;
+  }
+}
